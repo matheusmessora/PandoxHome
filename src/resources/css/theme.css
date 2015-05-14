@@ -1,0 +1,25 @@
+body {
+    /*background-color: #2b81af;*/
+    /*background-image: url("http://appsperia.themetek.com/demo5/images/bg.jpg");*/
+    background-image: url("http://wallpapertvs.com/wp-content/uploads/2014/10/work-desk-14949.jpg");
+    /*background-image: url("http://www.startupempire.co.uk/wp-content/uploads/2014/11/office-desk-background-2.jpg");*/
+
+    /*background-color: #fafbfc;*/
+    /*background-image: linear-gradient(163deg,#270530 10%,#196d82 36%,#fff 70%);*/
+    /*background-size: 100% 1100px;*/
+    color: #f1f1f1;
+}
+
+ul.services {
+    background: rgba(255, 255, 255, 0.1);
+}
+ul.services>li>a {
+    color: inherit;
+    border-bottom-color: transparent;
+}
+ul.services>li>a:hover {
+    border-bottom-color: #08c;
+}
+ul.services>li>a>.glyphicon {
+    color: #08c;
+}

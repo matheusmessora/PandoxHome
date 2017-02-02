@@ -87,6 +87,14 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.registerTask('compile', [
+	    'clean:build',
+	    'copy:dev',
+	    //'useminPrepare',
+	    //'usemin',
+	    'includes:dev'
+    ])	
+
 
     grunt.registerTask('dev', [
         'watch'

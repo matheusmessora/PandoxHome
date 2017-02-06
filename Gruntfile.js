@@ -26,7 +26,7 @@ module.exports = function (grunt) {
         ],
         clean: {
             dev: {
-                src: ["dev"]
+                src: ["dev/*"]
             },
             build: {
                 src: ["dist", ".tmp", "tmp", "dest", ".tmp"]
@@ -160,8 +160,8 @@ module.exports = function (grunt) {
         'useminPrepare',
         'concat:generated',
         'uglify:generated',
-        'rev',
-        'usemin',
+        // 'rev',
+        // 'usemin',
         'clean:trash'
     ]);
 

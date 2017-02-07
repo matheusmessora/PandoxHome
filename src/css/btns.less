@@ -1,0 +1,34 @@
+@import "colors";
+@import "shadow";
+.btn {
+  font-size: 14px;
+  font-weight: bold;
+  color: fade(#FFF, 87%);
+  transition: .3s ease-out;
+  //.shadow-1;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-radius: 0;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 8px;
+}
+
+.btn-primary {
+  background-color: @accent-dark-color;
+  border-color: @accent-dark-color;
+  .bg-hovers(@accent-dark-color)
+}
+.btn-support {
+  background-color: @support-dark-color;
+  border-color: @support-dark-color;
+  .bg-hovers(@support-dark-color)
+}
+
+.bg-hovers(@color){
+  &:hover, &:focus, &:active {
+    background-color: transparent;
+    border-color: @color;
+    color: fade(@color, 87%);
+  }
+}

@@ -1,5 +1,66 @@
-@import "test";
+@import "colors";
 
 html {
-    background-color: @nice-blue;
+    background-color: #FFF;
+    font-family: 'Nunito Sans', sans-serif;
+}
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    color: fade(@black, 87%);
+    background-color: @background;
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+    color: @primary-color;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+h1.separate {
+    //border-bottom: 2px solid @primary-light-color;
+    color: @primary-color;
+}
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 34px;
+    margin-bottom: 14px;
+}
+p.raleway {
+    font-family: 'Raleway', sans-serif;
+}
+p.nunito {
+    font-family: 'Nunito Sans', sans-serif;
+}
+p.accent {
+    color: @accent-dark-color;
+    font-weight: bold;
+}
+p.primary {
+    color: @primary-color;
+    font-weight: bold;
+}
+p.bold {
+    font-weight: bold;
+}
+p.italic {
+    font-style: italic;
+}
+
+.container {
+    background-color: @cards;
+}
+
+.square {
+    height: 125px;
+    display: block;
+}
+
+.bg.primary{
+    background-color: @primary-color;
+}
+.bg.accent {
+    background-color: @accent-color;
+}
+.bg.support{
+    background-color: @support-color;
 }

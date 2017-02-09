@@ -1,8 +1,11 @@
 @import "colors";
 @import "btns";
+@import "footer";
+
+@default-size: 16px;
+@ratio: 1.6180; // Golden Ratio
 
 html {
-    background-color: #FFF;
     font-family: 'Nunito Sans', sans-serif;
 }
 body {
@@ -14,21 +17,31 @@ body {
 h1 {
     font-family: 'Raleway', sans-serif;
     color: @primary-color;
-    font-size: 34px;
-    margin-bottom: 14px;
+    font-size: @default-size * @ratio * @ratio;
+    margin-bottom: 26.17px;
     padding-top: 5px;
 }
 .section {
-    border-bottom: 1px solid #F5F5F5;
-    padding-bottom: 50px;
+    border-bottom: 1px solid fade(#000, 12%);
+    padding-bottom: 30px;
+    margin-bottom: 30px * @ratio;
 }
 h1.separate {
     color: @primary-color;
-}
+}h1:after {
+    content: "";
+    display: block;
+    width: 46px;
+    height: 3px;
+    //background: fade(@accent-color, 87%);
+    background: @accent-color;
+    margin-top: 8.18px;
+    left: 0;
+ }
 h2 {
     font-family: 'Raleway', sans-serif;
-    font-size: 24px;
-    margin-bottom: 14px;
+    font-size: @default-size * @ratio;
+    margin-bottom: 16.18px;
 }
 p.raleway {
     font-family: 'Raleway', sans-serif;
@@ -36,11 +49,7 @@ p.raleway {
 p.nunito {
     font-family: 'Nunito Sans', sans-serif;
 }
-p.accent {
-    color: @accent-dark-color;
-    font-weight: bold;
-}
-p.primary {
+p.highlight {
     color: @primary-color;
     font-weight: bold;
 }
@@ -54,22 +63,27 @@ p.italic {
     border-bottom: 1px solid @accent-color;
 }
 .container {
-    background-color: @cards;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    margin-bottom: 50px;
+    border-radius: 3px;
 }
-
 .square {
     height: 125px;
     display: block;
 }
-
 .bg.primary{
     background-color: @primary-color;
 }
 .bg.accent {
     background-color: @accent-color;
 }
-.bg.support{
-    background-color: @support-color;
+
+a {
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    color: @accent-dark-color;
+    &:hover {
+        text-decoration:none;
+        color: @accent-color;
+    }
 }

@@ -2,6 +2,7 @@
 @import "btns";
 @import "footer";
 @import "navbar";
+@import "jumbotron";
 
 @default-size: 16px;
 @ratio: 1.6180; // Golden Ratio
@@ -29,7 +30,8 @@ h1 {
 }
 h1.separate {
     color: @primary-color;
-}h1:after {
+}
+h1:after {
     content: "";
     display: block;
     width: 46px;
@@ -38,7 +40,7 @@ h1.separate {
     background: @accent-color;
     margin-top: 8.18px;
     left: 0;
- }
+}
 h2 {
     font-family: 'Raleway', sans-serif;
     font-size: @default-size * @ratio;
@@ -54,33 +56,36 @@ p.highlight {
     color: @primary-color;
     font-weight: bold;
 }
-p.bold {
+.bold {
     font-weight: bold;
 }
-p.italic {
+.italic {
     font-style: italic;
+    color: fade(@black, 54%);
 }
 .separate {
     border-bottom: 1px solid @accent-color;
 }
-.jumbotron {
-    height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.498039), rgba(0, 0, 0, 0.2)) 0% 0% / cover,
-    url("http://media.istockphoto.com/photos/smartphone-in-hands-clipping-path-included-picture-id542697474?s=2048x2048") center center no-repeat;
-    //url("http://ydirection.com/Advent/assets/images/image-bg.jpg") center center no-repeat;
-    padding: 150px 0px 100px;
-    background-size: cover;
+.holder {
+    background-color: #F5F5F5;
 }
-.jumbotron .container {
-    padding-top: 100px;
-    padding-bottom: 100px;
+.holder-white {
+    background-color: #FFFFFF;
 }
+.holder {
+    background: #FFF;
+}
+.holder:nth-child(even){
+    background: @background;
+}
+
 .content {
-    //box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background: #FFFFFF;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     margin-bottom: 50px;
     border-radius: 3px;
-    background: #FFFFFF;
+
 }
 .content:nth-child(2n) {
     background: none;

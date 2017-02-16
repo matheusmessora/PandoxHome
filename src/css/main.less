@@ -13,7 +13,7 @@ html {
 body {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 16px;
-    color: fade(@black, 87%);
+    color: fade(@black, 54%);
     background-color: @background;
 }
 h1 {
@@ -45,6 +45,10 @@ h2 {
     font-family: 'Raleway', sans-serif;
     font-size: @default-size * @ratio;
     margin-bottom: 16.18px;
+    color: fade(@black, 87%);
+}
+h2.white {
+    color: #FFFFFF;
 }
 p.raleway {
     font-family: 'Raleway', sans-serif;
@@ -58,10 +62,11 @@ p.highlight {
 }
 .bold {
     font-weight: bold;
+    color: fade(@black, 87%);
 }
 .italic {
     font-style: italic;
-    color: fade(@black, 54%);
+    color: fade(@black, 38%);
 }
 .separate {
     border-bottom: 1px solid @accent-color;
@@ -105,7 +110,25 @@ a {
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     color: @accent-dark-color;
     &:hover {
+        cursor: hand;
         text-decoration:none;
         color: @accent-color;
     }
-};
+}
+
+
+.icon-holder {
+    background: @primary-dark-color;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+}
+.icon-holder .glyphicon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 13px;
+    font-size: 30px;
+    color: #FFFFFF;
+}

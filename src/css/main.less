@@ -95,6 +95,10 @@ p.highlight {
 .content:nth-child(2n) {
     background: none;
 }
+
+.feature {
+    margin-bottom: 50px;
+}
 .square {
     height: 125px;
     display: block;
@@ -118,17 +122,18 @@ a {
 
 
 .icon-holder {
-    background: @primary-dark-color;
+    //background: @primary-dark-color;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     display: inline-block;
+    text-align: center;
 }
-.icon-holder .glyphicon {
-    position: absolute;
+.icon-holder .icon {
+    padding: 10px 0;
     left: 0;
     right: 0;
     top: 13px;
     font-size: 30px;
-    color: #FFFFFF;
+    color: @primary-dark-color;
 }

@@ -16,14 +16,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-includes');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mustache-render');
-    grunt.loadNpmTasks('grunt-contrib-qunit');
 
     // Define the configuration for all the tasks
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        qunit: [
-            'test/**/*.html'
-        ],
         clean: {
             dev: {
                 src: ["dev/*"]
@@ -63,7 +59,8 @@ module.exports = function (grunt) {
         useminPrepare: {
             src: ['dev/includes/head.html'],
             options: {
-                dest: 'dev'
+                dest: 'dev', // destino arquivos concatenados -> unificados
+                root: 'src'
             }
         },
 
@@ -161,7 +158,7 @@ module.exports = function (grunt) {
         'concat:generated',
         'uglify:generated',
         // 'rev',
-        // 'usemin',
+        'usemin',
         'clean:trash'
     ]);
 

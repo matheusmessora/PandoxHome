@@ -25,7 +25,7 @@ module.exports = function (grunt) {
                 src: ["dev/*"]
             },
             build: {
-                src: ["dist", ".tmp", "tmp", "dest", ".tmp"]
+                src: ["dist/*", ".tmp", "tmp", "dest", ".tmp"]
             },
 
             trash: {
@@ -52,6 +52,14 @@ module.exports = function (grunt) {
             dev: {
                 files: {
                     "dev/css/main.css" : "src/css/**.less"
+                }
+            },
+            dist: {
+                files: {
+                    "dev/css/main.css" : "src/css/**.less"
+                },
+                options: {
+                    compress: true
                 }
             }
         },
@@ -134,6 +142,15 @@ module.exports = function (grunt) {
             }
         },
 
+        concat: {
+            analytics: {
+                src: ['dev/includes/analytics.html', 'dev/includes/footer.html'],
+                dest: 'dev/includes/footer.html'
+
+            }
+        },
+
+
         watch: {
             scripts: {
                 files: ['src/**/*.*'],
@@ -157,13 +174,24 @@ module.exports = function (grunt) {
         'useminPrepare',
         'concat:generated',
         'uglify:generated',
-        // 'rev',
+        'rev',
         'usemin',
         'clean:trash'
     ]);
 
     grunt.registerTask('package', [
-        'dev',
+        'clean:dev',
+        'clean:build',
+        'copy:dev',
+        'concat:analytics',
+        'includes:dev',
+        'less:dist',
+        'useminPrepare',
+        'concat:generated',
+        'uglify:generated',
+        'rev',
+        'usemin',
+        'clean:trash',
         'copy:package',
         'htmlmin:dist',
         'strip:main',

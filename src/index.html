@@ -130,12 +130,15 @@ include "includes/navbar.html"
                         </div>
                         <div class="col-md-6">
                             <div class="media">
-                                <div class="media-left persona">
+                                <div class="media-left persona hidden-sm hidden-xs">
                                     <img class="media-object img-circle" src="https://scontent.fcgh7-1.fna.fbcdn.net/v/t1.0-1/14601119_1086225104758199_50189786352159449_n.jpg?oh=13353df71ee179771874e9f8555e3739&oe=5902ED0B" alt="...">
                                 </div>
                                 <div class="media-body">
                                     <p class="italic">Nulla lectus dui, volutpat sed velit congue, pulvinar tristique nisi. Maecenas mollis rutrum bibendum. Etiam mollis diam risus, at varius ex dapibus sed. In in leo at sapien placerat sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                     <p>Rafaela Bezerra - <a href="http://doesuanota.com.br">doesuanota.com.br</a> </p>
+                                </div>
+                                <div class="media-right persona hidden-md hidden-lg">
+                                    <img class="media-object img-circle" src="https://scontent.fcgh7-1.fna.fbcdn.net/v/t1.0-1/14601119_1086225104758199_50189786352159449_n.jpg?oh=13353df71ee179771874e9f8555e3739&oe=5902ED0B" alt="...">
                                 </div>
                             </div>
 
@@ -172,7 +175,7 @@ include "includes/navbar.html"
                         </div>
                     </div>
                     <div class="row feature">
-                        <div class="col-md-6">
+                        <div class="col-md-6 hidden-xs hidden-sm">
                             <div class="effect-holder">
                                 <img src="https://image-pd.s3.envato.com/files/135704383/03.jpg" class="effect" />
                             </div>
@@ -186,6 +189,11 @@ include "includes/navbar.html"
                             <p>
                                 Contrate nossos serviços e tenha em mãos as melhores tecnologias do mercado.
                             </p>
+                        </div>
+                        <div class="col-md-6 hidden-md hidden-lg">
+                            <div class="effect-holder">
+                                <img src="https://image-pd.s3.envato.com/files/135704383/03.jpg" class="effect" />
+                            </div>
                         </div>
                     </div>
                     <div class="row feature">
@@ -222,17 +230,27 @@ include "includes/navbar.html"
                     <p>Caso prefira deixe seu e-mail ou telefone que iremos entrar em contato.</p>
                     <form>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="inputName">Nome</label>
+                                    <input type="email" class="form-control" id="inputName" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="inputEmail">E-mail</label>
                                     <input type="email" class="form-control" id="inputEmail" placeholder="seuemail@email.com">
                                 </div>
-                                <button type="submit" class="btn btn-primary">Enviar</button>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="inputPhone">Telefone</label>
                                     <input type="text" class="form-control" id="inputPhone" placeholder="(11) 99911-0000">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
                                 </div>
                             </div>
                         </div>

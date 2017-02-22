@@ -131,13 +131,40 @@ a {
 }
 
 .icon {
-    padding: 10px 0;
-    font-size: @default-size * @ratio;
-    color: @primary-color;
-}
-.icon-lg {
     padding: 0;
-    font-size: @default-size * @ratio * @ratio;
+    font-size: @default-size * @ratio;
+    color: #FFF;
+    display:inline-block;
+    line-height: 50px;
+    background: linear-gradient(135deg, @accent-light-color 0%, @accent-dark-color 45%);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: bottom;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    .shadow-1;
+}
+
+.icon-lg {
+    line-height: 60px;
+    font-size: 40px;
+    display:inline-block;
+    vertical-align: bottom;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+    border-radius: 25%;
+    color: #FFFFFF;
+    //background: linear-gradient(135deg, @accent-light-color 0%, @accent-dark-color 45%);
+    background: @accent-dark-color;
+    .shadow-1;
+}
+.icon-lg:hover {
+    .shadow-1;
+    //border-radius: 50%;
+    background: #FFFFFF;
+    color: @accent-dark-color;
 }
 
 .media {
